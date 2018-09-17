@@ -56,7 +56,12 @@ namespace Hołod_the_Game
                     Console.Clear(); Zagłada.Zagłada1(); break; //Dodać tryb
                 case ConsoleKey.Escape:
                     Console.Clear(); StartMenuGłówne(); break;
-                default: break;
+                default:
+                    AnimacjaTekstu.WriteRed("We mordo patrz co klikasz");
+                    Thread.Sleep(100);
+                    Console.Clear();
+                    Rozpocznij_grę();
+                    break;
             }
         }
 
@@ -73,7 +78,12 @@ namespace Hołod_the_Game
             {
                 case ConsoleKey.Escape:
                     Console.Clear(); StartMenuGłówne(); break;
-                default: break;
+                default:
+                    AnimacjaTekstu.WriteRed("We mordo patrz co klikasz");
+                    Thread.Sleep(100);
+                    Console.Clear();
+                    Wczytaj_grę();
+                    break;
             }
         }
 
@@ -98,11 +108,16 @@ namespace Hołod_the_Game
                     Console.Clear(); Dodatki(); break;
                 case ConsoleKey.Escape:
                     Console.Clear(); StartMenuGłówne(); break;
-                default: break;
+                default:
+                    AnimacjaTekstu.WriteRed("We mordo patrz co klikasz");
+                    Thread.Sleep(100);
+                    Console.Clear();
+                    Ustawienia();
+                    break;
             }
         }
-        public static string kolortła;
-        public static string kolorczcionki;
+        public static string kolortła = "Czarny";
+        public static string kolorczcionki = "Biały";
         private static void Grafika()
         {
             AnimacjaTekstu.Write("1> Zmień kolor tła");
@@ -126,7 +141,12 @@ namespace Hołod_the_Game
                     Console.Clear(); GrafikaPrzywróć(); break;
                 case ConsoleKey.Escape:
                     Console.Clear(); Ustawienia(); break;
-                default: break;
+                default:
+                    AnimacjaTekstu.WriteRed("We mordo patrz co klikasz");
+                    Thread.Sleep(100);
+                    Console.Clear();
+                    Grafika();
+                    break;
             }
         }
         private static void GrafikaPrzywróć()
@@ -136,6 +156,7 @@ namespace Hołod_the_Game
             kolortła = ("Czarny");
             Console.ForegroundColor = ConsoleColor.White;
             kolorczcionki = ("Biały");
+            Grafika();
 
         }
         private static void TłoKolory()
@@ -191,7 +212,12 @@ namespace Hołod_the_Game
                     Console.Clear(); Żółty(); break;
                 case ConsoleKey.Escape:
                     Console.Clear(); Grafika(); break;
-                default: break;
+                default:
+                    AnimacjaTekstu.WriteRed("We mordo patrz co klikasz");
+                    Thread.Sleep(100);
+                    Console.Clear();
+                    TłoKolory();
+                    break;
             }
             
         }
@@ -350,7 +376,12 @@ namespace Hołod_the_Game
                     Console.Clear(); Żółty1(); break;
                 case ConsoleKey.Escape:
                     Console.Clear(); Grafika(); break;
-                default: break;
+                default:
+                    AnimacjaTekstu.WriteRed("We mordo patrz co klikasz");
+                    Thread.Sleep(100);
+                    Console.Clear();
+                    CzcionkaKolory();
+                    break;
             }
         }
 
@@ -457,15 +488,21 @@ namespace Hołod_the_Game
         {
             AnimacjaTekstu.Write("Efekty dźwiękowe:" ); //on/off %%
             AnimacjaTekstu.Write("Muzyka: ");
+            AnimacjaTekstu.WriteGreen("Wciąż pracuję nad AUDIO");
             Console.ReadKey();
+            Console.Clear();
+            Ustawienia();
         }
 
         private static void Dodatki()
         {
-            AnimacjaTekstu.Write("A HUJ cię TEMPA KURFO OPHOCI to jakie są dodatki");
+            AnimacjaTekstu.Write("Dorzucę tu jakieś obelgi dotyczące Hołoda");
             AnimacjaTekstu.Write("1> Hołod korzysta z Windowsa: OFF"); //on/off
             AnimacjaTekstu.Write("2> Jebanie Hołoda: Always ON"); //on/off
+            AnimacjaTekstu.WriteGreen("Wciąż nad tym pracuję");
             Console.ReadKey();
+            Console.Clear();
+            Ustawienia();
         }
     }
 }     

@@ -73,7 +73,7 @@ namespace Hołod_the_Game
                     Console.Clear(); Rozdział1.Początek_Wszystkiego(); break;
                 case ConsoleKey.Escape:
                     Console.Clear(); Difflvl(); break;
-                default: break;
+                default: AnimacjaTekstu.WriteRed("We patrz co klikasz"); Difflvl(); break;
             }
         }
 
@@ -86,7 +86,7 @@ namespace Hołod_the_Game
             Console.Clear();
             AnimacjaTekstu.Write("<Nie daj sobą pomiatać!>");
             AnimacjaTekstu.Write("Pokaż kto tu rządzi! Wyślij wiązankę!");
-            AnimacjaTekstu.Write("<Nowa misja rozpoczęta!>");
+            AnimacjaTekstu.WriteDYellow("<Nowa misja rozpoczęta!>");
             AnimacjaTekstu.Write("<Pierwsze wyzwania!> Zwyzywaj Hołoda!");
             AnimacjaTekstu.Write("<Zadanie opcjonalne> Zajeb mu bułę w realu! [100xp, respect+]");
             AnimacjaTekstu.WriteGreen("Teraz zwyzywaj naszego przyjaciela");
@@ -97,7 +97,7 @@ namespace Hołod_the_Game
             Console.WriteLine("<Naciśnij dowolny klawisz>");
             Console.ReadKey();
             Console.Clear();
-            AnimacjaTekstu.Write("Tym razem cię puszczę "+Nickname);
+            AnimacjaTekstu.Write("Pierdol się!");
             AnimacjaTekstu.Write("<Misja ukończona!>");
             AnimacjaTekstu.Write("Na co czekasz? Spierdalaj!");
             AnimacjaTekstu.Write("<ESC> Powrót");
@@ -109,12 +109,13 @@ namespace Hołod_the_Game
                     Console.Clear(); Difflvl(); break;
                 case ConsoleKey.Enter:
                     Console.Clear(); Difflvl(); break;
-                default: break;
+                default: Difflvl(); break;
             }
         } 
 
         private static void Difflvl()
         {
+            Console.Clear();
             Console.Title = "Poziom trudności";
             AnimacjaTekstu.Write("Wybierz poziom trudności");
             AnimacjaTekstu.Write("1> Łatwy");

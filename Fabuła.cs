@@ -437,6 +437,7 @@ namespace Hołod_the_Game
 
     public static void Statystyki()
     {
+        AnimacjaTekstu.Write("Rasa: " + Postać.rasa);
         AnimacjaTekstu.Write("Klasa: " + Postać.klasa);
         AnimacjaTekstu.WriteGreen("Poziom:" + Lvl);
         AnimacjaTekstu.Write("EXP: " + Exp_Wymagany + "/" + Exp_Potrzebny);

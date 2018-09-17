@@ -11,7 +11,7 @@ namespace Hołod_the_Game
         public static void Zagłada1()
         {
             AnimacjaTekstu.Write("TRYB NADAL W TRAKCIE DOPRACOWYWANIA");
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             Console.WriteLine("");
             AnimacjaTekstu.Write("Tak na prawdę, to nawet nie zacząłem -Hubi");
             AnimacjaTekstu.Write("Wciśnij dowolny klawisz");

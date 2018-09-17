@@ -11,7 +11,7 @@ namespace Hołod_the_Game
         static void Main(string[] args)
         {
             Console.CursorVisible = false;
-            Postać.Rasy();
+            MenuGłówne.StartMenuGłówne();
         }
     }
 }
